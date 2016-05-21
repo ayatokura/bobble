@@ -1,0 +1,15 @@
+extends layout
+ 
+block content
+  div(style='width:400px')
+    h1= title
+    p= location
+    p Upload a picture of a head to get started!
+    p #{mes1} #{age} #{mes2}
+    p #{mes1} #{gender} #{mes3}
+    
+    form(action='/'       method='post' enctype="multipart/form-data")
+      input(type="file" name="userPhoto")
+      input(type="submit" value="Upload Image" name="submit")
+
+    img(src= image)
